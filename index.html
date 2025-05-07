@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Link Broadband | High-Speed Internet in Karimnagar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <style>
+
+/* City Link Broadband - Complete CSS */
+:root {
+    /* Primary Colors from Logo */
+    --lime-green: #B8EC00;
+    --royal-blue: #0033A0;
+    --crimson-red: #ED1C24;
+    --golden-yellow: #FFB400;
+    --deep-navy: #001E60;
+    --pure-white: #FFFFFF;
+    --pure-black: #000000;
+    
+    /* Derived Colors */
+    --lime-light: rgba(184, 236, 0, 0.1);
+    --blue-light: rgba(0, 51, 160, 0.1);
+    --navy-transparent: rgba(0, 30, 96, 0.9);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--pure-white);
+    color: var(--deep-navy);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Floating Elements - High Visibility Version */
+.floating-icon, .floating-logo {
+    position: fixed;
+    z-index: 1; /* Bring above background */
+    opacity: 0.5; /* Much more visible */
+    animation: float 8s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px #ffffff);
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Emoji Styles */
+.floating-icon {
+    font-size: 8rem; /* Very large emojis */
+    color: var(--color, var(--lime-green));
+    text-shadow: 
+        0 0 30px currentColor,
+        0 0 60px rgba(255, 255, 255, 0.8);
+}
+
+/* Logo Styles - Very Large and Prominent */
+.floating-logo img {
+    width: 250px; /* Much larger logo */
+    height: auto;
+    opacity: 0.4;
+    filter: 
+        drop-shadow(0 0 30px rgba(255, 255, 255, 1))
+        brightness(2);
+}
+
+/* Individual Element Customization */
+.floating-icon:nth-child(1) { /* 📶 */
+    top: 10%;
+    left: 5%;
+    color: var(--golden-yellow);
+    animation-duration: 7s;
+}
+
+.floating-logo:nth-child(2) { /* First logo */
+    top: 205%;
+    right: 5%;
+    animation-duration: 12s;
+}
+
+.floating-icon:nth-child(3) { /* 🌐 */
+    top: 70%;
+    left: 10%;
+    color: var(--royal-blue);
+    animation-duration: 9s;
+}
+
+.floating-logo:nth-child(4) { /* Second logo */
+    bottom: 20%;
+    right: 15%;
+    animation-duration: 15s;
+}
+
+.floating-icon:nth-child(5) { /* 📡 */
+    bottom: 10%;
+    right: 8%;
+    color: var(--crimson-red);
+    animation-duration: 11s;
+}
+
+.floating-logo:nth-child(6) { /* Third logo */
+    top: 40%;
+    left: 40%;
+    animation-duration: 18s;
+}
+
+.floating-icon:nth-child(7) { /* 🛜 */
+    top: 30%;
+    right: 20%;
+    color: var(--pure-white);
+    font-size: 10rem; /* Extra large */
+    animation-duration: 13s;
+}
+
+/* Animation */
+@keyframes float {
+    0%, 100% { 
+        transform: translate(0, 0) rotate(0deg) scale(1); 
+    }
+    25% { 
+        transform: translate(30px, -40px) rotate(5deg) scale(1.05); 
+    }
+    50% { 
+        transform: translate(-20px, -50px) rotate(-5deg) scale(1.1); 
+    }
+    75% { 
+        transform: translate(15px, -30px) rotate(3deg) scale(1.03); 
+    }
+}
+
+/* Header Styles */
+header {
+    background: var(--pure-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/*Logo*/
+.header-logo {
+    height: 80px; /* Large desktop size */
+    width: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease;
+}
+
+nav {
+    align-items: center;
+    padding: 1rem 5%; /* More vertical padding to accommodate larger logo */
+    min-height: 90px; /* Ensure header has enough height */
+}
+
+/* Adjust navigation links to align better with larger logo */
+.nav-links {
+    gap: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .header-logo {
+        height: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-logo {
+        height: 65px;
+    }
+    nav {
+        min-height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        height: 60px; /* Still quite large on mobile */
+    }
+    nav {
+        padding: 0.8rem 3%;
+        min-height: 75px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo {
+        height: 55px; /* Minimum size we want on small devices */
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--royal-blue);
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: var(--crimson-red);
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--deep-navy);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--crimson-red);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--golden-yellow);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--royal-blue);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--deep-navy) 100%);
+    padding: 8rem 5% 4rem;
+    text-align: center;
+    color: var(--pure-white);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+    background: var(--pure-white);
+    opacity: 0.6;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--golden-yellow);
+    opacity: 1;
+}
+
+/* Popup Modal Styles */
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    max-width: 90%;
+    width: 600px; /* Adjust this as needed */
+    border-radius: 8px;
+    position: relative;
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--crimson-red);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-popup:hover {
+    color: var(--royal-blue);
+    transform: scale(1.2);
+}
+
+/* Button Styles */
+.cta-button {
+    display: inline-block;
+    background: var(--crimson-red);
+    color: var(--pure-white);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(237, 28, 36, 0.3);
+}
+
+.cta-button:hover {
+    background: var(--pure-white);
+    color: var(--crimson-red);
+    border-color: var(--crimson-red);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(237, 28, 36, 0.4);
+}
+
+.cta-button.secondary {
+    background: var(--royal-blue);
+    box-shadow: 0 5px 15px rgba(0, 51, 160, 0.3);
+}
+
+.cta-button.secondary:hover {
+    background: var(--pure-white);
+    color: var(--royal-blue);
+    border-color: var(--royal-blue);
+    box-shadow: 0 8px 20px rgba(0, 51, 160, 0.4);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--royal-blue);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: var(--golden-yellow);
+    margin: 0.5rem auto;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    padding: 6rem 5%;
+    background: var(--pure-white);
+}
+
+.service-grid {
+  display: flex; /* Changed from grid to flex */
+  justify-content: space-between; /* Distributes space between cards */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+  padding: 10px 0; /* Adds some vertical padding */
+}
+
+.service-card {
+  flex: 1; /* Makes cards equal width */
+  min-width: 250px; /* Minimum card width */
+  background: var(--pure-white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid var(--lime-green);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--golden-yellow);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--royal-blue);
+}
+
+.service-card p {
+    color: #555;
+}
+
+/* Service Areas Section */
+.service-areas {
+    padding: 6rem 5%;
+    background: var(--deep-navy);
+    color: var(--pure-white);
+}
+
+.areas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.area-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.area-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: var(--golden-yellow);
+}
+
+.area-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--lime-green);
+}
+
+.area-column ul {
+    list-style: none;
+}
+
+.area-column li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.area-column li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--lime-green);
+    font-size: 1.5rem;
+}
+
+/* Plans Section */
+.plans {
+    padding: 6rem 5%;
+    background: var(--pure-white);
+}
+
+.plan-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.plan-tab {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--royal-blue);
+    color: var(--royal-blue);
+    background: var(--pure-white);
+}
+
+.plan-tab.active {
+    background: var(--royal-blue);
+    color: var(--pure-white);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 51, 160, 0.2);
+}
+
+.plan-tab:hover:not(.active) {
+    background: var(--blue-light);
+}
+
+.plan-content {
+    display: none;
+}
+
+.plan-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.plan-table th {
+    background: var(--royal-blue);
+    color: var(--pure-white);
+    padding: 1.2rem;
+    text-align: left;
+}
+
+.plan-table td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-table tr:nth-child(even) {
+    background-color: var(--blue-light);
+}
+
+.plan-table tr:hover {
+    background-color: rgba(184, 236, 0, 0.1);
+}
+
+.highlight {
+    color: var(--crimson-red);
+    font-weight: 600;
+}
+
+/* About Section */
+.about {
+    padding: 6rem 5%;
+    background: var(--pure-white);
+}
+
+.language-toggle {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.toggle-btn {
+    background: var(--royal-blue);
+    color: var(--pure-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: var(--crimson-red);
+    transform: scale(1.05);
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-text ul {
+    margin: 2rem 0;
+    list-style: none;
+}
+
+.about-text li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.about-text li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--golden-yellow);
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 6rem 5%;
+    background: var(--deep-navy);
+    color: var(--pure-white);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--navy-transparent);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--golden-yellow);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p:first-child {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.testimonial-card p:first-child::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -1.5rem;
+    left: -1rem;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: serif;
+}
+
+.testimonial-card p:last-child {
+    font-weight: 600;
+    text-align: right;
+    color: var(--lime-green);
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 5%;
+    background: var(--pure-white);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    background: var(--pure-white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    color: var(--royal-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.contact-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--golden-yellow);
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--royal-blue);
+    color: var(--pure-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contact-text h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contact-text p, .contact-text a {
+    margin: 0.3rem 0 0;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-text a:hover {
+    color: var(--crimson-red);
+}
+
+.qr-codes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: var(--pure-white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--royal-blue);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--golden-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 180, 0, 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: var(--deep-navy);
+    color: var(--pure-white);
+    padding: 4rem 0 2rem; /* Changed from 4rem 5% 2rem */
+    width: 100%;
+    overflow: hidden; /* Ensures background covers full width */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 5%; /* Added padding to contain content */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: var(--golden-yellow);
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--lime-green);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--lime-green);
+    padding-left: 5px;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--royal-blue);
+    border-radius: 50%;
+    color: var(--pure-white);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--golden-yellow);
+    color: var(--deep-navy);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 7rem 5% 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--deep-navy);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: all 0.5s ease;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links a {
+        color: var(--pure-white);
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .plan-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plan-tab {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+.testimonials .section-title {
+    color: var(--lime-green) !important;
+}
+
+/* Alternatively, if you want to be more specific: */
+.testimonials h2.section-title {
+    color: var(--lime-green);
+}
+
+</style>
+</head>
+<body>
+
+<!-- Floating Background Elements -->
+<div class="floating-bg">
+    <!-- Large Emojis -->
+    <div class="floating-icon">📶</div>
+    <div class="floating-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Lhy4jAtO_eZ5I4ZJ9AOp4DypbQjjUGpo4nzCFsNCz3CQFrwHjHg0q6_w&s=10" alt="City Link Logo">
+    </div>
+    <div class="floating-icon">🌐</div>
+    <div class="floating-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Lhy4jAtO_eZ5I4ZJ9AOp4DypbQjjUGpo4nzCFsNCz3CQFrwHjHg0q6_w&s=10" alt="City Link Logo">
+    </div>
+    <div class="floating-icon">📡</div>
+    <div class="floating-logo">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Lhy4jAtO_eZ5I4ZJ9AOp4DypbQjjUGpo4nzCFsNCz3CQFrwHjHg0q6_w&s=10" alt="City Link Logo">
+            </div>
+    <div class="floating-icon">🛜</div>
+</div>
+
+<!-- Header -->
+<header id="header">
+    <nav>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Lhy4jAtO_eZ5I4ZJ9AOp4DypbQjjUGpo4nzCFsNCz3CQFrwHjHg0q6_w&s=10" alt="City Link Broadband Logo" class="header-logo">
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#plans">Plans</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="cta-button">Get Connected</a>
+        </div>
+        <button class="mobile-menu-btn" style="display: none;">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero" id="home">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <h1>Surf the Web with a Smile! 😊</h1>
+                    <p>20+ years of delivering joyful, high-speed internet to Karimnagar</p>
+                    <a href="#contact" class="cta-button">Get Connected Today! 🎉</a>
+                    <img src="https://via.placeholder.com/600x400?text=Happy+Customers" alt="Happy customers" class="hero-image">
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <h1>Lightning Fast Internet ⚡</h1>
+                    <p>Experience seamless streaming, gaming, and browsing</p>
+                    <a href="#plans" class="cta-button">View Our Plans 🚀</a>
+                    <img src="https://via.placeholder.com/600x400?text=High+Speed+Internet" alt="High speed internet" class="hero-image">
+                </div>
+                
+                 <div class="swiper-slide">
+                    <h1>Special Deals, All Day Every Day! 🎁</h1>
+                    <p>Get 3 months free on annual subscriptions</p>
+                    <a href="#" class="cta-button" id="claim-offer-btn">Claim Offer Now! ✨</a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>High-speed Optical Fiber</h3>
+                <p>Blazing fast internet with fiber-optic technology for seamless connectivity.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📶</div>
+                <h3>Reliable Wireless</h3>
+                <p>Stable connections for areas without fiber infrastructure.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Dual Redundancy</h3>
+                <p>Uninterrupted performance with backup networks.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Business Solutions</h3>
+                <p>Custom plans for commercial needs with priority support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="service-areas">
+        <h2 class="section-title" style="color: white;">Our Service Areas</h2>
+        <div class="areas-container">
+            <div class="area-column">
+                <h3>Karimnagar Urban</h3>
+                <ul>
+                    <li>All city areas</li>
+                    <li>24/7 support</li>
+                    <li>Same-day installation</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h3>Karimnagar Rural</h3>
+                <ul>
+                    <li>Theegalaguttapally</li>
+                    <li>Choppadandi</li>
+                    <li>Kothapally</li>
+                    <li>Thimmapur</li>
+                    <li>Nuslapur</li>
+                    <li>Kothapalli</li>
+                    <li>Chigurumamidi</li>
+                    <li>Gangadhara</li>
+                    <li>Bavupet</li>
+                    <li>Baddipalli</li>
+                    <li>Durshed</li>
+                    <li>Gopalpur</li>
+                    <li>Ramadugu</li>
+                    <li>Alugunoor</li>
+                    <li>Manakondur</li>
+                    <li>Annaram</li>
+                    <li>Chinthakunta</li>
+                    <li>Malkapur</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <!-- Plans Section -->
+<section class="plans" id="plans">
+    <h2 class="section-title">Our Internet Plans</h2>
+    
+    <div class="plan-tabs">
+        <div class="plan-tab active" data-tab="airtel">Airtel</div>
+        <div class="plan-tab" data-tab="bsnl">BSNL</div>
+        <div class="plan-tab" data-tab="railtel">RailTel</div>
+    </div>
+    
+    <div class="plan-content active" id="airtel-plans">
+        <table class="plan-table">
+            <thead>
+                <tr>
+                    <th>Price/Month</th>
+                    <th>Internet Speed</th>
+                    <th>DTH Benefits</th>
+                    <th>Other Benefits</th>
+                    <th>Wi-Fi Router & Installation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>₹499</td>
+                    <td>Up to 40 Mbps</td>
+                    <td>-</td>
+                    <td>Airtel Xstream Play (22+ OTTs)</td>
+                    <td>Free on 6 Months/12 Months plan</td>
+                </tr>
+                <tr>
+                    <td>₹599*<br>*In select Geographies</td>
+                    <td>Up to 30 Mbps</td>
+                    <td>350+ TV channels (HD included)</td>
+                    <td>ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on advance plans</td>
+                </tr>
+                <tr>
+                    <td>₹699*<br>*In select Geographies</td>
+                    <td>Up to 40 Mbps</td>
+                    <td>350+ TV channels (HD included)</td>
+                    <td>ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on advance plans</td>
+                </tr>
+                <tr>
+                    <td>₹799</td>
+                    <td>Up to 100 Mbps</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Free on 3 months/6 Months/12 Months plan</td>
+                </tr>
+                <tr>
+                    <td>₹899</td>
+                    <td>Up to 100 Mbps</td>
+                    <td>350+ TV channels (HD included)</td>
+                    <td>ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on advance plans</td>
+                </tr>
+                <tr>
+                    <td>₹999</td>
+                    <td>Up to 100 Mbps</td>
+                    <td>-</td>
+                    <td>Netflix, Apple TV+, Amazon Prime, ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on 3 months/6 Months/12 Months plan</td>
+                </tr>
+                <tr>
+                    <td>₹1199</td>
+                    <td>Up to 100 Mbps</td>
+                    <td>350+ TV channels (HD included)</td>
+                    <td>Netflix, Apple TV+, Amazon Prime, ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on advance plans</td>
+                </tr>
+                <tr>
+                    <td>₹1599</td>
+                    <td>Up to 300 Mbps</td>
+                    <td>350+ TV channels (HD included)</td>
+                    <td>Netflix, Apple TV+, Amazon Prime, ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on advance plans</td>
+                </tr>
+                <tr>
+                    <td>₹3999</td>
+                    <td>Up to 1 Gbps</td>
+                    <td>350+ TV channels (HD included)</td>
+                    <td>Netflix, Apple TV+, Amazon Prime, ZEE5, JioHotstar, 22+ OTTs & much more</td>
+                    <td>Free on advance plans</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="plan-content" id="bsnl-plans">
+        <table class="plan-table">
+            <thead>
+                <tr>
+                    <th>Plan Name</th>
+                    <th>Price/Month</th>
+                    <th>Speed</th>
+                    <th>Data</th>
+                    <th>Voice</th>
+                    <th>OTT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FIBRE BASIC PLUS OTT-FBB-COMBO Monthly</td>
+                    <td>₹699.00</td>
+                    <td>Upto 60 Mbps till 3300 GB<br>4 Mbps beyond 3300 GB</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+                <tr>
+                    <td>Fibre Value OTT Monthly</td>
+                    <td>₹799.00</td>
+                    <td>Up to 100 Mbps till 1000 GB<br>Upto 5 Mbps beyond</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+                <tr>
+                    <td>SuperStar PremiumPlus OTT Monthly</td>
+                    <td>₹999.00</td>
+                    <td>Upto 150 Mbps till 2000 GB<br>10 Mbps beyond 2000 GB</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+                <tr>
+                    <td>Fibre Premium Plus OTT Monthly</td>
+                    <td>₹1499.00</td>
+                    <td>Up to 200 Mbps till 3300 GB<br>15 Mbps beyond 3300 GB</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+                <tr>
+                    <td>Fibre Ultra OTT Monthly</td>
+                    <td>₹1799.00</td>
+                    <td>Up to 300 Mbps till 4000 GB<br>15 Mbps beyond 4000 GB</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+                <tr>
+                    <td>Fibre Silver Plus OTT Monthly</td>
+                    <td>₹2799.00</td>
+                    <td>Up to 300 Mbps till 5000 GB<br>30 Mbps beyond 5000 GB</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+                <tr>
+                    <td>Fibre Ruby OTT Monthly</td>
+                    <td>₹4799.00</td>
+                    <td>Up to 300 Mbps till 6500 GB<br>40 Mbps beyond 6500 GB</td>
+                    <td>Unlimited</td>
+                    <td>Local + STD: Unlimited</td>
+                    <td>Free OTT</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="plan-content" id="railtel-plans">
+        <table class="plan-table">
+            <thead>
+                <tr>
+                    <th>Plan Name</th>
+                    <th>Speed</th>
+                    <th>Data</th>
+                    <th>Price (monthly)</th>
+                    <th>Validity</th>
+                    <th>OTTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Umang-50-T1 (FHA)</td>
+                    <td>50 Mbps</td>
+                    <td>2.5 GB</td>
+                    <td>Rs. 599</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Umang-100-T1 (FHA)</td>
+                    <td>100 Mbps</td>
+                    <td>3 GB</td>
+                    <td>Rs. 799</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Umang-125-T1 (FHA)</td>
+                    <td>125 Mbps</td>
+                    <td>3 GB</td>
+                    <td>Rs. 899</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Umang-150-T1 (FHA)</td>
+                    <td>150 Mbps</td>
+                    <td>3 GB</td>
+                    <td>Rs. 1099</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Tarang-50-T1 (FHA)</td>
+                    <td>50 Mbps</td>
+                    <td>2.5 GB</td>
+                    <td>Rs. 599</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Tarang-100-T1 (FHA)</td>
+                    <td>100 Mbps</td>
+                    <td>3 GB</td>
+                    <td>Rs. 799</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Tarang-125-T1 (FHA)</td>
+                    <td>125 Mbps</td>
+                    <td>3 GB</td>
+                    <td>Rs. 899</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Tarang-150-T1 (FHA)</td>
+                    <td>150 Mbps</td>
+                    <td>3 GB</td>
+                    <td>Rs. 1,099</td>
+                    <td>30 days</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Satrang Super Pack 200 Mbps</td>
+                    <td>200 Mbps</td>
+                    <td>3.3 GB</td>
+                    <td>Rs. 1,199</td>
+                    <td>30 days</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Satrang Super Pack 250 Mbps</td>
+                    <td>250 Mbps</td>
+                    <td>3.5 GB</td>
+                    <td>Rs. 1,299</td>
+                    <td>30 days</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Satrang Super Pack 300 Mbps</td>
+                    <td>300 Mbps</td>
+                    <td>3.5 GB</td>
+                    <td>Rs. 1,399</td>
+                    <td>30 days</td>
+                    <td>22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="#contact" class="cta-button secondary">Need a Custom Plan? Contact Us</a>
+    </div>
+</section>
+
+    <!-- JavaScript for switching plans -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.plan-tab');
+            const contents = document.querySelectorAll('.plan-content');
+    
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove 'active' from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+    
+                    // Activate current tab and corresponding content
+                    this.classList.add('active');
+                    const target = this.getAttribute('data-tab');
+                    document.getElementById(`${target}-plans`).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="language-toggle">
+            <button class="toggle-btn" id="language-toggle">Read in తెలుగు</button>
+        </div>
+        
+        <h2 class="section-title">🌟 Our Story</h2>
+        
+        <div class="about-content">
+            <div class="about-text" id="english-content">
+                <p><strong>For over 20 years</strong>, we've been Karimnagar's favorite internet provider—delivering <span style="color: var(--primary);">blazing-fast speeds</span> and <span style="color: var(--secondary);">hassle-free connections</span> to homes and businesses across the region.</p>
+                
+                <p>City Link Broadband has been a trusted name in internet connectivity for nearly two decades, proudly serving Karimnagar and surrounding areas since 2005. We deliver high-speed internet through optical fiber cables, wireless systems, and dual redundancy networks, offering plans ranging from 30 Mbps to 1 Gbps — tailored to meet every need.</p>
+                
+                <p>We provide seamless internet solutions for:</p>
+                
+                <ul>
+                    <li><strong>🏠 Residential Homes</strong> - Enjoy buffer-free streaming and gaming</li>
+                    <li><strong>🏫 Schools & Colleges</strong> - Reliable connectivity for education</li>
+                    <li><strong>🏥 Hospitals</strong> - Critical connectivity for healthcare</li>
+                    <li><strong>🏢 Businesses & Commercial Spaces</strong> - Power your operations</li>
+                </ul>
+                
+                <p>Our packages come with FREE OTT               subscriptions and FREE Voice services, adding unbeatable value to your internet experience.</p>
+                
+                <p>Thousands of satisfied customers — including showrooms, hospitals, residential homes, and educational institutions across Karimnagar — rely on CityLink for their daily connectivity.</p>
+                
+                <p>Today, we offer trusted services through top brands to suit your preference:</p>
+                
+                <ul>
+                    <li>Airtel Xstream Fiber & Airtel Air Fiber</li>
+                    <li>RailTel Railway Networks</li>
+                    <li>BSNL Fiber & BSNL Air Fiber</li>
+                </ul>
+                
+                <p>Choose City Link — where Trust Meets Speed.</p>
+            </div>
+            
+            <div class="about-text" id="telugu-content" style="display: none;">
+                <p><strong>20 సంవత్సరాలుగా</strong>, మేము కరీంనగర్‌లోని ప్రియమైన ఇంటర్నెట్ ప్రొవైడర్ — <span style="color: var(--primary);">అద్భుతమైన వేగాలు</span> మరియు <span style="color: var(--secondary);">సులభమైన కనెక్షన్లు</span>ని ఇళ్లకు మరియు వ్యాపారాలకు అందిస్తున్నాము.</p>
+                
+                <p>సిటీలింక్ బ్రాడ్‌బ్యాండ్ సుమారు రెండు దశాబ్దాలుగా ఇంటర్నెట్ కనెక్టివిటీకి విశ్వసనీయమైన పేరు, 2005 నుండి గర్వంగా కరీంనగర్ మరియు పరిసర ప్రాంతాల్లో సేవలను అందిస్తున్నాము. మేము ఆప్టికల్ ఫైబర్ కేబుల్స్, వైర్లెస్ సిస్టమ్స్ మరియు డ్యుయల్ రెడండెన్సీ నెట్‌వర్క్‌ల ద్వారా హై-స్పీడ్ ఇంటర్నెట్‌ను అందిస్తున్నాము, 30 Mbps నుండి 1 Gbps వరకు అనువైన ప్లాన్‌లను అందించి, మీ అన్ని అవసరాలకు అనుగుణంగా సేవలు అందిస్తున్నాము.</p>
+                
+                <p>మేము సేవలు అందిస్తున్న రంగాలు:</p>
+                
+                <ul>
+                    <li><strong>🏠 వాసస్థానాలు</strong> - బఫర్-ఫ్రీ స్ట్రీమింగ్ మరియు గేమింగ్</li>
+                    <li><strong>🏫 పాఠశాలలు మరియు కళాశాలలు</strong> - విద్య కోసం నమ్మదగిన కనెక్టివిటీ</li>
+                    <li><strong>🏥 ఆసుపత్రులు</strong> - ఆరోగ్య సంరక్షణ కోసం కీలక కనెక్టివిటీ</li>
+                    <li><strong>🏢 వ్యాపార మరియు వాణిజ్య కేంద్రాలు</strong> - మీ కార్యకలాపాలను శక్తివంతం చేయండి</li>
+                </ul>
+                
+                <p>మా ప్యాకేజీలు ఉచిత OTT సబ్‌స్క్రిప్షన్లు మరియు ఉచిత వాయిస్ సేవలతో మీ ఇంటర్నెట్ అనుభవానికి అదనపు విలువను జోడిస్తున్నాయి.</p>
+                
+                <p>కరీంనగర్ అంతటా ఉన్న వేలాది మంది సంతృప్తి చెందిన వినియోగదారులు — షోరూములు, ఆసుపత్రులు, నివాస గృహాలు మరియు విద్యా సంస్థలు — వారి నిత్య వినియోగానికి సిటీలింక్ సేవలపై ఆధారపడి ఉన్నారు.</p>
+                
+                <p>ఈరోజు, మేము మీ అభిరుచికి అనుగుణంగా ప్రసిద్ధ బ్రాండ్ల సేవలను అందిస్తున్నాము:</p>
+                
+                <ul>
+                    <li>ఎయిర్టెల్ ఎక్స్‌స్ట్రీమ్ ఫైబర్ & ఎయిర్ ఫైబర్</li>
+                    <li>రైల్టెల్ రైల్వే నెట్‌వర్క్స్</li>
+                    <li>బిఎస్‌ఎన్‌ఎల్ ఫైబర్ & ఎయిర్ ఫైబర్</li>
+                </ul>
+                
+                <p>సిటీలింక్‌ను ఎంచుకోండి — విశ్వాసం మరియు వేగం కలిసే ప్రదేశం!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #fff; margin-bottom: 2rem;">Hear from our satisfied customers about their experiences with City Link Broadband.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"I’ve been a customer for nearly 10 years — the prices are reasonable, and the service has consistently been excellent."</p>
+                    <p>- Snehanjali Kamatam</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The internet is consistently fast with high speeds at all times"</p>
+                    <p>- Raghu Arutla</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Customer care via calls and WhatsApp is excellent — responsive and helpful."</p>
+                    <p>- Kavitha Guntuka</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I stream, game, and attend Zoom classes — no lag whatsoever."</p>
+                    <p>- Sai Kumar</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Affordable plans, free OTT — I highly recommend getting a connection"</p>
+                    <p>- Akshay Gasikanti</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I have never encountered any issues with Wi-Fi speed, reliability, or customer service."</p>
+                    <p>- Rammohan</p>
+                </div>
+            </div>
+        </section>
+               
+    <!-- Contact Us Section -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Get in Touch with City Link Broadband</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <h4>Phone Numbers</h4>
+                            <p><a href="tel:+919642955566">+91 96429 55566</a></p>
+                            <p><a href="tel:+918500824365">+91 85008 24365</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/919676192461">+91 96761 92461</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📷</div>
+                        <div class="contact-text">
+                            <h4>Instagram</h4>
+                            <p><a href="https://instagram.com/citylink_broadband_" target="_blank">@citylink_broadband_</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:citylink.network@gmail.com">citylink.network@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Contact Form</h3>
+                    <form action="https://formsubmit.co/snehakamatam28@gmail.com" method="POST">
+                        <!-- Required fields -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <input type="hidden" name="_template" value="table"> <!-- Better email formatting -->
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> <!-- REPLACE WITH YOUR URL -->
+                        <input type="hidden" name="_captcha" value="false"> <!-- Disable captcha -->
+                        
+                        <!-- Honeypot field -->
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <!-- Form fields -->
+                        <div class="form-group">
+                            <label for="name">Enter Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Enter Email Id</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+  
+    <!-- Footer Section -->
+    <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                  <h3>Quick Links</h3>
+                  <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#plans">Plans</a></li>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#contact">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="footer-column">
+                   <h3>Follow Us</h3>
+                         <div class="social-links">
+                           <a href="https://instagram.com/citylink_broadband_" target="_blank">
+                           <i class="fab fa-instagram"></i>
+                           </a>
+                           <a href="mailto:citylink.network@gmail.com">
+                           <i class="fas fa-envelope"></i>
+                           </a>
+                          </div>
+                </div>
+                <div class="footer-column">
+                  <h3>Contact</h3>
+                  <p>City Link Broadband, Karimnagar, Telangana , 505001</p>
+                  <p>Phone: +91 96429 55566</p>
+                  <p><a href="mailto:citylink.network@gmail.com">citylink.network@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 City Link Broadband. All rights reserved. <br>
+                Site designed and maintained by City Link, Karimnagar
+                <div>
+                    <a href="#">Terms</a> | <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+  
+        <div class="popup-modal" id="special-offer-modal">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <img src="images/poster-of-referrals.png" alt="Special Anniversary Offer" class="popup-image">
+            </div>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Language toggle
+    const toggleBtn = document.getElementById('language-toggle');
+    const englishContent = document.getElementById('english-content');
+    const teluguContent = document.getElementById('telugu-content');
+
+    if (toggleBtn && englishContent && teluguContent) {
+        toggleBtn.addEventListener('click', () => {
+            if (englishContent.style.display === 'none') {
+                englishContent.style.display = 'block';
+                teluguContent.style.display = 'none';
+                toggleBtn.textContent = 'Read in తెలుగు';
+            } else {
+                englishContent.style.display = 'none';
+                teluguContent.style.display = 'block';
+                toggleBtn.textContent = 'Read in English';
+            }
+        });
+    }
+
+    // Plan tabs functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.plan-tab');
+        const contents = document.querySelectorAll('.plan-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                this.classList.add('active');
+                const target = this.getAttribute('data-tab');
+                document.getElementById(`${target}-plans`).classList.add('active');
+            });
+        });
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Popup modal functionality (optimized single implementation)
+    // Get DOM elements
+    const offerModal = document.getElementById('special-offer-modal');
+    const offerBtn = document.getElementById('claim-offer-btn');
+    const closeBtn = document.querySelector('.close-popup');
+
+    // Show modal function
+    const showModal = () => {
+        offerModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    };
+
+    // Close modal function
+    const closeModal = () => {
+        offerModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    };
+
+    // Event listeners
+    if (offerBtn) {
+        offerBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showModal();
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (offerModal) {
+        // Close when clicking outside content
+        offerModal.addEventListener('click', (e) => {
+            if (e.target === offerModal) {
+                closeModal();
+            }
+        });
+
+        // Close when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && offerModal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    }
+    // AJAX Form Submission
+    document.querySelector(".contact-form form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const submitBtn = form.querySelector("button[type='submit']");
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+        
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: { "Accept": "application/json" }
+            });
+            
+            if (response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+            } else {
+                throw new Error("Failed to send");
+            }
+        } catch (error) {
+            alert("Oops! Something went wrong. Please try again.");
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Message";
+        }
+    });
+    </script>
+
+</body>
+</html>
