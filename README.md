@@ -20,8 +20,6 @@ This project is a complete website redesign for City Link Broadband featuring:
 | Form Handling           | FormSubmit.co                       |
 | Deployment              | Firebase Hosting                    |
 
-## 📂 Project Structure
-
 
 ## ✨ Key Features
 
