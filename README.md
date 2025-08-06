@@ -1,6 +1,6 @@
 # 🚀 Project Overview
 
-**🌍 Live Website:** [citylinkbrodband.web.app](https://citylinkbrodband.web.app)   
+**Live Website:** [https://citylink-broadband.web.app/](https://citylink-broadband.web.app/)  
 
 This project is a complete website redesign for City Link Broadband featuring:
 - ✅ Responsive design for all devices
